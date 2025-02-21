@@ -2,7 +2,7 @@
 
 Deseja-se obter o modelo de regessão linear para os seguintes dados:
 
-| x_1  | x_2 | y |
+| $x_1$  | $x_2$ | $y$ |
 |---|---|---|
 | 0 | 1 | 3 |
 | 1 | 2 | 6 |
@@ -12,89 +12,40 @@ Deseja-se obter o modelo de regessão linear para os seguintes dados:
 
 Calcule os coeficientes da regessão.
 
-### Resposta
+## Questão 2
 
-$$
-Y = \begin{bmatrix}
-3 \\
-6 \\
-7 \\
-8 \\
-11
-\end{bmatrix}
-$$
+Explique a necessidade de se utilizar conjuntos de dados separados para treinamento e para testes em algoritmos de aprendizado de máquina.
 
-$$
-X = \begin{bmatrix}
-1 & 0 & 1 \\
-1 & 1 & 2 \\
-1 & 2 & 2 \\
-1 & 3 & 1 \\
-1 & 4 & 2
-\end{bmatrix}
-$$
+## Questão 3
 
-$$w = (X^T X)^{-1} X^T Y$$
+Explique o papel da épocas de treinamento em um algoritmo de aprendizado de máquina.
 
-Bora calcular $X^TX$.
+## Questão 4
 
-$$
-X^T X = \begin{bmatrix}
-5 & 10 & 8 \\
-10 & 30 & 17 \\
-8 & 17 & 14
-\end{bmatrix}
-$$
+Os seguintes dados (circulos claros) formam um conjunto de dados onde deseja-se descobrir dois agrupamentos. Para esta tarefa foi utilizado o algoritmo k-médias. Inicializando o algoritmo nos centróides representados pelos círculos escuros, esboce a posição final destes centróides, determine os dados pertencentes a cada cluster e explique se o resultado foi satisfatório.
 
-Calculo a inversa disso:
+(Imagem)
 
-$$
-(X^T X)^{-1} = \begin{bmatrix}
-\frac{131}{11} & \frac{-3}{22} & \frac{-4}{11} \\
-\frac{-4}{55} & \frac{23}{220} & \frac{-1}{11} \\
-\frac{-14}{11} & \frac{-1}{22} & \frac{10}{11}
-\end{bmatrix}
-$$
+## Questão 5
 
-Agora calculo $X^T Y$
+Deseja-se classificar o dado representado pelo quadrado em uma das classes (círculos claros e escuros) e para isto optou-se pelo uso do k-nn. Determine a classificação deste dado para $k = 1$, $k = 3$, $k = 5$ e $k = 7$.
 
-$$
-X^T Y = \begin{bmatrix}
-1 & 1 & 1 & 1 & 1 \\
-0 & 1 & 2 & 3 & 4 \\
-1 & 2 & 2 & 1 & 2
-\end{bmatrix} \cdot 
-\begin{bmatrix}
-3 \\
-6 \\
-7 \\
-8 \\
-11
-\end{bmatrix} =
-Y = \begin{bmatrix}
-35 \\
-88 \\
-59 
-\end{bmatrix}
-$$
+(Imagem)
 
-E por fim faço o w, já que tenho $X^T X$ e $X^T Y$
+## Questão 6
 
-$$
-w = \begin{bmatrix}
-35 \cdot \frac{131}{11} & 88 \cdot \frac{-3}{22} & 59 \cdot \frac{-4}{11} \\
-35 \cdot \frac{-4}{55} & 88 \cdot \frac{23}{220} & 59 \cdot \frac{-1}{11} \\
-35 \cdot \frac{-14}{11} & 88 \cdot \frac{-1}{22} & 59 \cdot \frac{10}{11}
-\end{bmatrix}
-$$
+Esboçar o dendrograma utilizando a distância euclidiana para os seguintes dados:
 
-Portanto
-
-$$
-w = \begin{bmatrix}
-\frac{4217}{11} \\
-\frac{284}{220} \\
-\frac{56}{11} 
-\end{bmatrix}
-$$
-
+| $x_1$  | $x_2$ |
+|---|---|
+| -3 | 0 |
+| -3 | 2 |
+| -3 | -2 |
+| 1 | 4 |
+| 2 | 2 |
+| 2 | -2 |
+| 2 | -3 |
+| 3 | 4 |
+| 3 | 2 |
+| 4 | -1 |
+| 4 | -3 |
